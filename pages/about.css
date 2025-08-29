@@ -204,14 +204,6 @@ body {
   height: auto;
   z-index: 0;
 }
-
-/* Responsive grid */
-@media (max-width: 900px) {
-  .directors-inner { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .directors-inner { grid-template-columns: 1fr; }
-}
 /* -- Directors Section --> */
 
 /*--Our clients section --> */
@@ -246,3 +238,23 @@ body {
     user-select: none;
 }
 /*--Our clients section --> */
+/* ------------------------------
+   RESPONSIVE BREAKPOINTS
+--------------------------------*/
+@media (max-width: 1200px) {
+  .about-hero .container { flex-direction: column; text-align: center; gap: 2rem; }
+  .directors-inner { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .about-hero .container { padding: 0 20px; }
+  .about-left h1 { font-size: 2.2rem; }
+  .directors-inner { grid-template-columns: 1fr; }
+  .clients h2 { font-size: 24px; }
+}
+
+@media (max-width: 480px) {
+  .about-left h1 { font-size: 1.8rem; }
+  .about-right p { font-size: 1rem; }
+  .clients h2 { font-size: 20px; }
+}
